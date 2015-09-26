@@ -43,8 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PPKControllerDelegate {
         }
         PPKControllerInitialized()
         
-        
-        return true
     }
     
     

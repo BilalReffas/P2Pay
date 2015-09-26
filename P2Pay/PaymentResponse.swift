@@ -16,10 +16,12 @@ class PaymentResponse: NSObject, Typeable {
     
     var data: NSDictionary {
         get {
+            return NSDictionary()
+            /*
             return [
                 "uuid" : uuid,
                 "coupons" : coupons.map( { return $0.id })
-            ]
+            ]*/
         }
         
         set {

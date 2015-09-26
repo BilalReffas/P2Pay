@@ -40,14 +40,7 @@ class ViewController: UIViewController,PPKControllerDelegate,MessagingDelegate{
         else if result.isCancelled {
             // Handle cancellations
         }
-        else {
-            // If you ask for multiple permissions at once, you
-            // should check if specific permissions missing
-            if result.grantedPermissions.contains("email")
-            {
-                // Do work
-            }
-        }
+    
     }
     
     func returnUserData()

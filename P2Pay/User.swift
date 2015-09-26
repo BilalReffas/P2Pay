@@ -22,10 +22,11 @@ class User: NSObject, Typeable {
         get {
             let imageData = UIImageJPEGRepresentation(avatar!, 60.0)
             let base64String = imageData!.base64EncodedStringWithOptions(.EncodingEndLineWithLineFeed)
-            return [
+            /*return [
                 "name" : self.name,
                 "avatar" : base64String
-            ]
+            ]*/
+            return NSDictionary()
         }
         
         set {
