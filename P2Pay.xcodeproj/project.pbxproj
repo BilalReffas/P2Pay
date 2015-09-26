@@ -21,6 +21,13 @@
 		A6BD0F261BB6D5F400B78627 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F251BB6D5F400B78627 /* Coupon.swift */; settings = {ASSET_TAGS = (); }; };
 		A6BD0F281BB6D61A00B78627 /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F271BB6D61A00B78627 /* PaymentRequest.swift */; settings = {ASSET_TAGS = (); }; };
 		A6BD0F2C1BB6D9D300B78627 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F2B1BB6D9D300B78627 /* Serializable.swift */; settings = {ASSET_TAGS = (); }; };
+		509663DB1BB6D9E600AE987E /* P2PKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663DA1BB6D9E600AE987E /* P2PKit.framework */; settings = {ASSET_TAGS = (); }; };
+		509663DE1BB6DB1800AE987E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663DD1BB6DB1800AE987E /* CoreBluetooth.framework */; };
+		509663E01BB6DB1D00AE987E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663DF1BB6DB1D00AE987E /* CoreLocation.framework */; };
+		509663E21BB6DB2B00AE987E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663E11BB6DB2B00AE987E /* CFNetwork.framework */; };
+		509663E41BB6DB3100AE987E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663E31BB6DB3100AE987E /* Security.framework */; };
+		509663E61BB6DB3900AE987E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663E51BB6DB3900AE987E /* Foundation.framework */; };
+		509663E81BB6DB4500AE987E /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663E71BB6DB4500AE987E /* libicucore.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +68,14 @@
 		A6BD0F251BB6D5F400B78627 /* Coupon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
 		A6BD0F271BB6D61A00B78627 /* PaymentRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentRequest.swift; sourceTree = "<group>"; };
 		A6BD0F2B1BB6D9D300B78627 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
+		509663DA1BB6D9E600AE987E /* P2PKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = P2PKit.framework; sourceTree = "<group>"; };
+		509663DC1BB6DA4700AE987E /* P2Pay-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "P2Pay-Bridging-Header.h"; sourceTree = "<group>"; };
+		509663DD1BB6DB1800AE987E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		509663DF1BB6DB1D00AE987E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		509663E11BB6DB2B00AE987E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		509663E31BB6DB3100AE987E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		509663E51BB6DB3900AE987E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		509663E71BB6DB4500AE987E /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +83,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				509663E81BB6DB4500AE987E /* libicucore.tbd in Frameworks */,
+				509663E61BB6DB3900AE987E /* Foundation.framework in Frameworks */,
+				509663E41BB6DB3100AE987E /* Security.framework in Frameworks */,
+				509663E21BB6DB2B00AE987E /* CFNetwork.framework in Frameworks */,
+				509663E01BB6DB1D00AE987E /* CoreLocation.framework in Frameworks */,
+				509663DE1BB6DB1800AE987E /* CoreBluetooth.framework in Frameworks */,
+				509663DB1BB6D9E600AE987E /* P2PKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +113,13 @@
 		509663911BB6D35200AE987E = {
 			isa = PBXGroup;
 			children = (
+				509663E71BB6DB4500AE987E /* libicucore.tbd */,
+				509663E51BB6DB3900AE987E /* Foundation.framework */,
+				509663E31BB6DB3100AE987E /* Security.framework */,
+				509663E11BB6DB2B00AE987E /* CFNetwork.framework */,
+				509663DF1BB6DB1D00AE987E /* CoreLocation.framework */,
+				509663DD1BB6DB1800AE987E /* CoreBluetooth.framework */,
+				509663DA1BB6D9E600AE987E /* P2PKit.framework */,
 				5096639C1BB6D35200AE987E /* P2Pay */,
 				509663B11BB6D35200AE987E /* P2PayTests */,
 				509663BC1BB6D35200AE987E /* P2PayUITests */,
@@ -118,6 +147,7 @@
 				509663A41BB6D35200AE987E /* Assets.xcassets */,
 				509663A61BB6D35200AE987E /* LaunchScreen.storyboard */,
 				509663A91BB6D35200AE987E /* Info.plist */,
+				509663DC1BB6DA4700AE987E /* P2Pay-Bridging-Header.h */,
 			);
 			path = P2Pay;
 			sourceTree = "<group>";
@@ -224,6 +254,7 @@
 		509663921BB6D35200AE987E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Bilal Karim Reffas";
 				TargetAttributes = {
@@ -442,11 +473,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = P2Pay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.Bilal-Karim-Reffas..P2Pay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_BITCODE_FROM_COPIED_FILES = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ReffasCode/Desktop/P2Pay/P2Pay/P2Pay-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -454,11 +492,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = P2Pay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.Bilal-Karim-Reffas..P2Pay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_BITCODE_FROM_COPIED_FILES = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ReffasCode/Desktop/P2Pay/P2Pay/P2Pay-Bridging-Header.h";
 			};
 			name = Release;
 		};
