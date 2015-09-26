@@ -25,11 +25,15 @@
 		509663EE1BB7181800AE987E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663ED1BB7181800AE987E /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
 		A650A60F1BB6DD1A005288FA /* P2PayClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A60E1BB6DD1A005288FA /* P2PayClient.swift */; settings = {ASSET_TAGS = (); }; };
 		A650A6121BB6DDF6005288FA /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A6111BB6DDF6005288FA /* PaymentResponse.swift */; settings = {ASSET_TAGS = (); }; };
+		A650A60F1BB6DD1A005288FA /* P2PayClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A60E1BB6DD1A005288FA /* P2PayClient.swift */; settings = {ASSET_TAGS = (); }; };
+		A650A6121BB6DDF6005288FA /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A6111BB6DDF6005288FA /* PaymentResponse.swift */; settings = {ASSET_TAGS = (); }; };
+		A650A6161BB6F48C005288FA /* Typeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A6151BB6F48C005288FA /* Typeable.swift */; settings = {ASSET_TAGS = (); }; };
+		A650A6181BB7010D005288FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A6171BB7010D005288FA /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		A6BD0F221BB6D5BB00B78627 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F211BB6D5BB00B78627 /* User.swift */; settings = {ASSET_TAGS = (); }; };
 		A6BD0F241BB6D5CD00B78627 /* POS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F231BB6D5CD00B78627 /* POS.swift */; settings = {ASSET_TAGS = (); }; };
 		A6BD0F261BB6D5F400B78627 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F251BB6D5F400B78627 /* Coupon.swift */; settings = {ASSET_TAGS = (); }; };
 		A6BD0F281BB6D61A00B78627 /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F271BB6D61A00B78627 /* PaymentRequest.swift */; settings = {ASSET_TAGS = (); }; };
-		A6BD0F2C1BB6D9D300B78627 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F2B1BB6D9D300B78627 /* Serializable.swift */; settings = {ASSET_TAGS = (); }; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,11 +79,15 @@
 		509663ED1BB7181800AE987E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = P2Pay/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		A650A60E1BB6DD1A005288FA /* P2PayClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P2PayClient.swift; sourceTree = "<group>"; };
 		A650A6111BB6DDF6005288FA /* PaymentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
+		A650A60E1BB6DD1A005288FA /* P2PayClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P2PayClient.swift; sourceTree = "<group>"; };
+		A650A6111BB6DDF6005288FA /* PaymentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
+		A650A6151BB6F48C005288FA /* Typeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typeable.swift; sourceTree = "<group>"; };
+		A650A6171BB7010D005288FA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A6BD0F211BB6D5BB00B78627 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A6BD0F231BB6D5CD00B78627 /* POS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POS.swift; sourceTree = "<group>"; };
 		A6BD0F251BB6D5F400B78627 /* Coupon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
 		A6BD0F271BB6D61A00B78627 /* PaymentRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentRequest.swift; sourceTree = "<group>"; };
-		A6BD0F2B1BB6D9D300B78627 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +164,7 @@
 				509663A61BB6D35200AE987E /* LaunchScreen.storyboard */,
 				509663A91BB6D35200AE987E /* Info.plist */,
 				509663DC1BB6DA4700AE987E /* P2Pay-Bridging-Header.h */,
+				A650A6171BB7010D005288FA /* LoginViewController.swift */,
 			);
 			path = P2Pay;
 			sourceTree = "<group>";
@@ -196,7 +205,7 @@
 				A6BD0F251BB6D5F400B78627 /* Coupon.swift */,
 				A6BD0F271BB6D61A00B78627 /* PaymentRequest.swift */,
 				A650A6111BB6DDF6005288FA /* PaymentResponse.swift */,
-				A6BD0F2B1BB6D9D300B78627 /* Serializable.swift */,
+				A650A6151BB6F48C005288FA /* Typeable.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -333,13 +342,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6BD0F281BB6D61A00B78627 /* PaymentRequest.swift in Sources */,
+				A650A6161BB6F48C005288FA /* Typeable.swift in Sources */,
 				A6BD0F261BB6D5F400B78627 /* Coupon.swift in Sources */,
 				509663A01BB6D35200AE987E /* ViewController.swift in Sources */,
 				A650A60F1BB6DD1A005288FA /* P2PayClient.swift in Sources */,
 				5096639E1BB6D35200AE987E /* AppDelegate.swift in Sources */,
-				A6BD0F2C1BB6D9D300B78627 /* Serializable.swift in Sources */,
 				A6BD0F241BB6D5CD00B78627 /* POS.swift in Sources */,
 				A650A6121BB6DDF6005288FA /* PaymentResponse.swift in Sources */,
+				A650A6181BB7010D005288FA /* LoginViewController.swift in Sources */,
 				A6BD0F221BB6D5BB00B78627 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,7 +504,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.Bilal-Karim-Reffas.P2Pay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_BITCODE_FROM_COPIED_FILES = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ReffasCode/Desktop/P2Pay/P2Pay/P2Pay-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "P2Pay/P2Pay-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -514,7 +524,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.Bilal-Karim-Reffas.P2Pay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_BITCODE_FROM_COPIED_FILES = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ReffasCode/Desktop/P2Pay/P2Pay/P2Pay-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "P2Pay/P2Pay-Bridging-Header.h";
 			};
 			name = Release;
 		};

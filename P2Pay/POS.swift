@@ -9,5 +9,7 @@
 import UIKit
 
 class POS: NSObject {
-
+    var name: String?
+    var logo: UIImage?
+    let coupons: [Coupon] = []
 }
