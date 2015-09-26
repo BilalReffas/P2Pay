@@ -34,7 +34,23 @@
                     <view key="view" contentMode="scaleToFill" id="oSo-tc-G6o">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="P2PayLogo" translatesAutoresizingMaskIntoConstraints="NO" id="VW0-xb-fUk">
+                                <rect key="frame" x="225" y="71" width="150" height="150"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P2Pay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7l-8B-IM8">
+                                <rect key="frame" x="237" y="229" width="127.5" height="59"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="49"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L7l-8B-IM8" firstAttribute="top" secondItem="VW0-xb-fUk" secondAttribute="bottom" constant="8" id="4s3-G0-Fxr"/>
+                            <constraint firstItem="VW0-xb-fUk" firstAttribute="top" secondItem="Fz3-lq-mN5" secondAttribute="bottom" constant="51" id="YsQ-fU-EGj"/>
+                            <constraint firstItem="VW0-xb-fUk" firstAttribute="centerX" secondItem="oSo-tc-G6o" secondAttribute="centerX" id="gWk-Tj-LLh"/>
+                            <constraint firstItem="L7l-8B-IM8" firstAttribute="centerX" secondItem="oSo-tc-G6o" secondAttribute="centerX" id="x2f-u6-kvE"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="openMainViewController" id="0a0-RH-f1H"/>
@@ -45,4 +61,7 @@
             <point key="canvasLocation" x="646" y="505"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="P2PayLogo" width="150" height="150"/>
+    </resources>
 </document>
