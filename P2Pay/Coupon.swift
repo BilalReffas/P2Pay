@@ -15,7 +15,7 @@ class Coupon: NSObject {
     }
     var id: String!
     var name: String!
-    var value: Double!
+    var value: NSInteger!
     var information: String!
     var image: UIImage!
     var type: CouponType!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class User: NSObject, Typeable {
+class User: NSObject, Serializable {
     var type = "user_identity"
     var name: String?
     var avatar: UIImage?
@@ -18,20 +18,8 @@ class User: NSObject, Typeable {
         self.peerID = peerID
     }
     
-    var data: NSDictionary {
-        get {
-            let imageData = UIImageJPEGRepresentation(avatar!, 60.0)
-            let base64String = imageData!.base64EncodedStringWithOptions(.EncodingEndLineWithLineFeed)
-            /*return [
-                "name" : self.name,
-                "avatar" : base64String
-            ]*/
-            return NSDictionary()
-        }
-        
-        set {
-            
-        }
+    func data() -> NSDictionary {
+        return NSDictionary()
     }
 
 }

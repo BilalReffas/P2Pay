@@ -8,25 +8,17 @@
 
 import UIKit
 
-class PaymentResponse: NSObject, Typeable {
-    var type = "payment_response"
-    
+class PaymentResponse: NSObject, Serializable {
+    enum PaymentStatus {
+        case Accept
+        case Decline
+    }
     var uuid: String?
-    let coupons: [Coupon] = []
+    var coupons: [Coupon] = []
+    var status: PaymentStatus?
     
-    var data: NSDictionary {
-        get {
-            return NSDictionary()
-            /*
-            return [
-                "uuid" : uuid,
-                "coupons" : coupons.map( { return $0.id })
-            ]*/
-        }
-        
-        set {
-            
-        }
-        
+    var type: String = "payment_response"
+    func data() -> NSDictionary {
+        return NSDictionary()
     }
 }
