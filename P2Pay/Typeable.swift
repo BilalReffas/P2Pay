@@ -1,5 +1,5 @@
 //
-//  Serializer.swift
+//  Typeable.swift
 //  P2Pay
 //
 //  Created by Niklas Riekenbrauck on 26.09.15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol Serializable {
+protocol Typeable {
     var type: String { get }
-    func data() -> NSDictionary
+    var data: NSDictionary { set get }
 }

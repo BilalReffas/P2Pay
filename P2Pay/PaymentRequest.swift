@@ -8,6 +8,16 @@
 
 import UIKit
 
-class PaymentRequest: NSObject {
-
+class PaymentRequest: NSObject, Typeable {
+    var type = "payment_request"
+    
+    var data: NSDictionary {
+        get {
+           return NSDictionary()
+        }
+        
+        set {
+            
+        }
+    }
 }

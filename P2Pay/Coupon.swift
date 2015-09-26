@@ -9,5 +9,14 @@
 import UIKit
 
 class Coupon: NSObject {
-
+    enum CouponType {
+        case Multiplication
+        case Addidition
+    }
+    var id: String!
+    var name: String!
+    var value: Double!
+    var information: String!
+    var image: UIImage!
+    var type: CouponType!
 }

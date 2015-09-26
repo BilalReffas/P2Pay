@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PPKControllerDelegate {
         
         PPKControllerInitialized()
         
+        P2PayClient.sharedInstance.me = User(peerID: PPKController.myPeerID())
+        
         return true
     }
     
