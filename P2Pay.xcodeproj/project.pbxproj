@@ -14,6 +14,13 @@
 		509663A81BB6D35200AE987E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509663A61BB6D35200AE987E /* LaunchScreen.storyboard */; };
 		509663B31BB6D35200AE987E /* P2PayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509663B21BB6D35200AE987E /* P2PayTests.swift */; };
 		509663BE1BB6D35200AE987E /* P2PayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509663BD1BB6D35200AE987E /* P2PayUITests.swift */; };
+		A650A60F1BB6DD1A005288FA /* P2PayClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A60E1BB6DD1A005288FA /* P2PayClient.swift */; settings = {ASSET_TAGS = (); }; };
+		A650A6121BB6DDF6005288FA /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A6111BB6DDF6005288FA /* PaymentResponse.swift */; settings = {ASSET_TAGS = (); }; };
+		A6BD0F221BB6D5BB00B78627 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F211BB6D5BB00B78627 /* User.swift */; settings = {ASSET_TAGS = (); }; };
+		A6BD0F241BB6D5CD00B78627 /* POS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F231BB6D5CD00B78627 /* POS.swift */; settings = {ASSET_TAGS = (); }; };
+		A6BD0F261BB6D5F400B78627 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F251BB6D5F400B78627 /* Coupon.swift */; settings = {ASSET_TAGS = (); }; };
+		A6BD0F281BB6D61A00B78627 /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F271BB6D61A00B78627 /* PaymentRequest.swift */; settings = {ASSET_TAGS = (); }; };
+		A6BD0F2C1BB6D9D300B78627 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F2B1BB6D9D300B78627 /* Serializable.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		509663B91BB6D35200AE987E /* P2PayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = P2PayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		509663BD1BB6D35200AE987E /* P2PayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P2PayUITests.swift; sourceTree = "<group>"; };
 		509663BF1BB6D35200AE987E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A650A60E1BB6DD1A005288FA /* P2PayClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P2PayClient.swift; sourceTree = "<group>"; };
+		A650A6111BB6DDF6005288FA /* PaymentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
+		A6BD0F211BB6D5BB00B78627 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A6BD0F231BB6D5CD00B78627 /* POS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POS.swift; sourceTree = "<group>"; };
+		A6BD0F251BB6D5F400B78627 /* Coupon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
+		A6BD0F271BB6D61A00B78627 /* PaymentRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentRequest.swift; sourceTree = "<group>"; };
+		A6BD0F2B1BB6D9D300B78627 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +111,7 @@
 		5096639C1BB6D35200AE987E /* P2Pay */ = {
 			isa = PBXGroup;
 			children = (
+				A650A6101BB6DD21005288FA /* Client */,
 				5096639D1BB6D35200AE987E /* AppDelegate.swift */,
 				5096639F1BB6D35200AE987E /* ViewController.swift */,
 				509663A11BB6D35200AE987E /* Main.storyboard */,
@@ -123,6 +138,28 @@
 				509663BF1BB6D35200AE987E /* Info.plist */,
 			);
 			path = P2PayUITests;
+			sourceTree = "<group>";
+		};
+		A650A6101BB6DD21005288FA /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				A650A60E1BB6DD1A005288FA /* P2PayClient.swift */,
+				A6BD0F201BB6D59E00B78627 /* Model */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		A6BD0F201BB6D59E00B78627 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A6BD0F211BB6D5BB00B78627 /* User.swift */,
+				A6BD0F231BB6D5CD00B78627 /* POS.swift */,
+				A6BD0F251BB6D5F400B78627 /* Coupon.swift */,
+				A6BD0F271BB6D61A00B78627 /* PaymentRequest.swift */,
+				A650A6111BB6DDF6005288FA /* PaymentResponse.swift */,
+				A6BD0F2B1BB6D9D300B78627 /* Serializable.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,8 +292,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6BD0F281BB6D61A00B78627 /* PaymentRequest.swift in Sources */,
+				A6BD0F261BB6D5F400B78627 /* Coupon.swift in Sources */,
 				509663A01BB6D35200AE987E /* ViewController.swift in Sources */,
+				A650A60F1BB6DD1A005288FA /* P2PayClient.swift in Sources */,
 				5096639E1BB6D35200AE987E /* AppDelegate.swift in Sources */,
+				A6BD0F2C1BB6D9D300B78627 /* Serializable.swift in Sources */,
+				A6BD0F241BB6D5CD00B78627 /* POS.swift in Sources */,
+				A650A6121BB6DDF6005288FA /* PaymentResponse.swift in Sources */,
+				A6BD0F221BB6D5BB00B78627 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +529,7 @@
 				509663C41BB6D35200AE987E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		509663C51BB6D35200AE987E /* Build configuration list for PBXNativeTarget "P2PayTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +538,7 @@
 				509663C71BB6D35200AE987E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		509663C81BB6D35200AE987E /* Build configuration list for PBXNativeTarget "P2PayUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +547,7 @@
 				509663CA1BB6D35200AE987E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
