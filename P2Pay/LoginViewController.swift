@@ -14,7 +14,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         
         let loginButton = FBSDKLoginButton()
-        loginButton.center = self.view.center
+        loginButton.center = CGPointMake(self.view.center.x, self.view.center.y + 200 )
         self.view.addSubview(loginButton)
         loginButton.readPermissions = ["public_profile"]
         loginButton.delegate = self
