@@ -151,14 +151,13 @@
 		5096639C1BB6D35200AE987E /* P2Pay */ = {
 			isa = PBXGroup;
 			children = (
-				5096639D1BB6D35200AE987E /* AppDelegate.swift */,
-				5096639F1BB6D35200AE987E /* ViewController.swift */,
+				509663EF1BB72BBA00AE987E /* MainClient */,
+				A650A6191BB722A4005288FA /* LoginViewController.swift */,
 				509663A11BB6D35200AE987E /* Main.storyboard */,
 				509663A41BB6D35200AE987E /* Assets.xcassets */,
 				509663A61BB6D35200AE987E /* LaunchScreen.storyboard */,
 				509663A91BB6D35200AE987E /* Info.plist */,
 				509663DC1BB6DA4700AE987E /* P2Pay-Bridging-Header.h */,
-				A650A6191BB722A4005288FA /* LoginViewController.swift */,
 			);
 			path = P2Pay;
 			sourceTree = "<group>";
@@ -179,6 +178,15 @@
 				509663BF1BB6D35200AE987E /* Info.plist */,
 			);
 			path = P2PayUITests;
+			sourceTree = "<group>";
+		};
+		509663EF1BB72BBA00AE987E /* MainClient */ = {
+			isa = PBXGroup;
+			children = (
+				5096639D1BB6D35200AE987E /* AppDelegate.swift */,
+				5096639F1BB6D35200AE987E /* ViewController.swift */,
+			);
+			name = MainClient;
 			sourceTree = "<group>";
 		};
 		A650A6101BB6DD21005288FA /* Client */ = {
