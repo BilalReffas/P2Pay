@@ -24,7 +24,17 @@ class P2PayClient: NSObject {
     var me: User?
     
     func sendPaymentAcceptanceFor(paymentRequest: PaymentRequest, coupons: [Coupon]) {
-        
+        let paymentResponse = PaymentResponse()
+        paymentResponse.coupons = coupons
+        paymentResponse.uuid = paymentRequest.uuid
+        paymentResponse.status = PaymentResponse.PaymentStatus.Accept
+        self.sendData(paymentResponse)
+    }
+    
+    func sendUserInformation() {
+        if let me = self.me {
+            self.sendData(me)
+        }
     }
     
     func receiveData(data: NSDictionary) {
@@ -55,12 +65,11 @@ class P2PayClient: NSObject {
         }
     }
     
-    func sendData(data: Serializable){
-        /*let dic: [String:AnyObject] = [
-            "type" : data.type,
-            "data" : data.data
-        ]
-       delegate?.didSendData(dic)*/
+    private func sendData(data: Serializable){
+        let dic = NSDictionary()
+        dic.setValue(data.type, forKey: "type")
+        dic.setValue(data.data(), forKey: "data")
+       delegate?.didSendData(dic)
     }
     
     
