@@ -10,6 +10,9 @@ import UIKit
 
 protocol MessagingDelegate {
     func didSendData(data: NSDictionary)
+    
+    func didReceivePOSIdentity(pos: POS)
+    func didReceivePaymentRequest(paymentRequest: PaymentRequest)
 }
 
 class P2PayClient: NSObject {
@@ -20,27 +23,44 @@ class P2PayClient: NSObject {
     var pos: [POS] = []
     var me: User?
     
+    func sendPaymentAcceptanceFor(paymentRequest: PaymentRequest, coupons: [Coupon]) {
+        
+    }
+    
     func receiveData(data: NSDictionary) {
         guard let type: String = data["type"] as? String else {return}
         guard let data: NSDictionary = data["data"] as? NSDictionary else {return}
         if (type == "pos_identity") {
             let p = POS()
-            p.name = data["name"] as? String
-            //p.avatar = data["avatar"] as? String
-            
+            p.name = data.valueForKeyPath("name") as? String
+            p.colorCode = data.valueForKeyPath("color_code") as? String
+            //p.avatar = data.valueForKeyPath("avatar") as? String
+            if let coupons = data.valueForKeyPath("coupons") as? [NSDictionary] {
+                for coupon in coupons {
+                    let c = Coupon()
+                    c.name          = coupon.valueForKeyPath("name") as? String
+                    c.value         = coupon.valueForKeyPath("value") as? NSInteger
+                    c.information   = coupon.valueForKeyPath("information") as? String
+                    p.coupons.append(c)
+                }
+            }
             pos.append(p)
+            delegate?.didReceivePOSIdentity(p)
         } else if (type == "payment_request") {
-            
+            let paymentRequest = PaymentRequest()
+            paymentRequest.uuid     = data.valueForKeyPath("uuid") as? String
+            paymentRequest.amount   = data.valueForKeyPath("amount") as? Double
+            paymentRequest.currency = data.valueForKeyPath("currency") as? String
+            delegate?.didReceivePaymentRequest(paymentRequest)
         }
     }
-
     
-    func sendData(data: Typeable) {
-        let dic: [String : AnyObject] = [
+    func sendData(data: Serializable){
+        /*let dic: [String:AnyObject] = [
             "type" : data.type,
             "data" : data.data
-            ]
-        delegate?.didSendData(dic)
+        ]
+       delegate?.didSendData(dic)*/
     }
     
     
