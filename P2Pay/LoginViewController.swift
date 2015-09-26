@@ -46,7 +46,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 // Process error
                 print("Error: \(error)")
             } else {
-                let id = result.valueForKey("id") as! String
+                _ = result.valueForKey("id") as! String
                 self.performSegueWithIdentifier("openMainViewController", sender: self)
             }
         })
