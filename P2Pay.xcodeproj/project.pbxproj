@@ -23,6 +23,7 @@
 		509663E81BB6DB4500AE987E /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663E71BB6DB4500AE987E /* libicucore.tbd */; };
 		509663EC1BB7165300AE987E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663EB1BB7165300AE987E /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
 		509663EE1BB7181800AE987E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663ED1BB7181800AE987E /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
+		509663F11BB7319F00AE987E /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509663F01BB7319F00AE987E /* CouponCell.swift */; settings = {ASSET_TAGS = (); }; };
 		A650A60F1BB6DD1A005288FA /* P2PayClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A60E1BB6DD1A005288FA /* P2PayClient.swift */; settings = {ASSET_TAGS = (); }; };
 		A650A6121BB6DDF6005288FA /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A6111BB6DDF6005288FA /* PaymentResponse.swift */; settings = {ASSET_TAGS = (); }; };
 		A650A61A1BB722A4005288FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A6191BB722A4005288FA /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -74,6 +75,7 @@
 		509663E71BB6DB4500AE987E /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		509663EB1BB7165300AE987E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = P2Pay/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		509663ED1BB7181800AE987E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = P2Pay/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		509663F01BB7319F00AE987E /* CouponCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
 		A650A60E1BB6DD1A005288FA /* P2PayClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P2PayClient.swift; sourceTree = "<group>"; };
 		A650A6111BB6DDF6005288FA /* PaymentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
 		A650A6191BB722A4005288FA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -151,14 +153,14 @@
 		5096639C1BB6D35200AE987E /* P2Pay */ = {
 			isa = PBXGroup;
 			children = (
-				5096639D1BB6D35200AE987E /* AppDelegate.swift */,
-				5096639F1BB6D35200AE987E /* ViewController.swift */,
+				509663EF1BB72BBA00AE987E /* MainClient */,
+				A650A6191BB722A4005288FA /* LoginViewController.swift */,
 				509663A11BB6D35200AE987E /* Main.storyboard */,
+				509663F01BB7319F00AE987E /* CouponCell.swift */,
 				509663A41BB6D35200AE987E /* Assets.xcassets */,
 				509663A61BB6D35200AE987E /* LaunchScreen.storyboard */,
 				509663A91BB6D35200AE987E /* Info.plist */,
 				509663DC1BB6DA4700AE987E /* P2Pay-Bridging-Header.h */,
-				A650A6191BB722A4005288FA /* LoginViewController.swift */,
 			);
 			path = P2Pay;
 			sourceTree = "<group>";
@@ -179,6 +181,15 @@
 				509663BF1BB6D35200AE987E /* Info.plist */,
 			);
 			path = P2PayUITests;
+			sourceTree = "<group>";
+		};
+		509663EF1BB72BBA00AE987E /* MainClient */ = {
+			isa = PBXGroup;
+			children = (
+				5096639D1BB6D35200AE987E /* AppDelegate.swift */,
+				5096639F1BB6D35200AE987E /* ViewController.swift */,
+			);
+			name = MainClient;
 			sourceTree = "<group>";
 		};
 		A650A6101BB6DD21005288FA /* Client */ = {
@@ -336,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6BD0F281BB6D61A00B78627 /* PaymentRequest.swift in Sources */,
+				509663F11BB7319F00AE987E /* CouponCell.swift in Sources */,
 				A6BD0F261BB6D5F400B78627 /* Coupon.swift in Sources */,
 				509663A01BB6D35200AE987E /* ViewController.swift in Sources */,
 				A650A60F1BB6DD1A005288FA /* P2PayClient.swift in Sources */,
