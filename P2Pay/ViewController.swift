@@ -12,12 +12,16 @@ class ViewController: UIViewController,PPKControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
     }
 
     func p2pPeerDiscovered(peer: PPKPeer!) {
@@ -35,5 +39,15 @@ class ViewController: UIViewController,PPKControllerDelegate {
         guard let discoveryString = discoveryInfo else {print("No DiscoveryInfo...");return}
         print("Has updated discovery info: \(peer.peerID) \(discoveryString)")
     }
+    
+    func messageReceived(messageBody: NSData!, header messageHeader: String!, from peerID: String!) {
+        guard let messageText = NSString(data: messageBody, encoding: NSUTF8StringEncoding) else {return}
+        print("Get message from : \(peerID) with text : \(messageText) and header : \(messageHeader)")
+    }
+    
+    @IBAction func pressed(sender: AnyObject) {
+         PPKController.sendMessage(NSData(), withHeader: "", to: "")
+    }
+    
 }
 
