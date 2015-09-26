@@ -22,35 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PPKControllerDelegate {
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
-    func p2pDiscoveryStateChanged(state: PPKPeer2PeerDiscoveryState) {
-        if state == PPKPeer2PeerDiscoveryState.Running{
-            print("Peer2Peer Is Running")
-        }else if state == PPKPeer2PeerDiscoveryState.Stopped{
-            print("Peer2Peer Is stopped")
-        }else if state == PPKPeer2PeerDiscoveryState.Suspended{
-            print("Peer2Peer Is suspended")
-        }
-    }
-    
-    func onlineMessagingStateChanged(state: PPKOnlineMessagingState) {
-        if state == PPKOnlineMessagingState.Running{
-            print("Messaging Is Running")
-            PPKController.sendMessage("hallo slex du spasst".dataUsingEncoding(NSUTF8StringEncoding), withHeader: "", to: "647bfb57-bf33-44d9-96be-44756d656e69")
-        }else if state == PPKOnlineMessagingState.Stopped{
-            print("Messaging Is stopped")
-        }else if state == PPKOnlineMessagingState.Suspended{
-            print("Messaging Is suspended")
-        }
-        PPKControllerInitialized()
-        
-    }
-    
-    
-    func PPKControllerInitialized() {
-        PPKController.startP2PDiscovery()
-        PPKController.startOnlineMessaging()
-        PPKController.startP2PDiscoveryWithDiscoveryInfo("Aley jetzt Info".dataUsingEncoding(NSUTF8StringEncoding))
-    }
     
     func application(application: UIApplication,
         openURL url: NSURL,
