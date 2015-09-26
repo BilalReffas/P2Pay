@@ -13,4 +13,5 @@ class POS: NSObject {
     var logo: UIImage?
     var colorCode: String?
     var coupons: [Coupon] = []
+    var peerID: String?
 }

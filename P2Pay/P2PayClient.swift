@@ -10,7 +10,7 @@ import UIKit
 
 @objc
 protocol MessagingDelegate {
-    func didSendData(data: NSDictionary)
+    func willSendData(data: NSDictionary)
     optional func didReceivePOSIdentity(pos: POS)
     optional func didReceivePaymentRequest(paymentRequest: PaymentRequest)
 }
@@ -20,7 +20,7 @@ class P2PayClient: NSObject {
     
     var delegate: MessagingDelegate?
     
-    var pos: [POS] = []
+    var pos: POS = POS()
     var me: User?
     
     func sendPaymentAcceptanceFor(paymentRequest: PaymentRequest, coupons: [Coupon]) {
@@ -41,9 +41,8 @@ class P2PayClient: NSObject {
         guard let type: String = data["type"] as? String else {return}
         guard let data: NSDictionary = data["data"] as? NSDictionary else {return}
         if (type == "pos_identity") {
-            let p = POS()
-            p.name = data.valueForKeyPath("name") as? String
-            p.colorCode = data.valueForKeyPath("color_code") as? String
+            pos.name = data.valueForKeyPath("name") as? String
+            pos.colorCode = data.valueForKeyPath("color_code") as? String
             //p.avatar = data.valueForKeyPath("avatar") as? String
             if let coupons = data.valueForKeyPath("coupons") as? [NSDictionary] {
                 for coupon in coupons {
@@ -51,11 +50,10 @@ class P2PayClient: NSObject {
                     c.name          = coupon.valueForKeyPath("name") as? String
                     c.value         = coupon.valueForKeyPath("value") as? NSInteger
                     c.information   = coupon.valueForKeyPath("information") as? String
-                    p.coupons.append(c)
+                    pos.coupons.append(c)
                 }
             }
-            pos.append(p)
-            delegate?.didReceivePOSIdentity!(p)
+            delegate?.didReceivePOSIdentity!(pos)
         } else if (type == "payment_request") {
             let paymentRequest = PaymentRequest()
             paymentRequest.uuid     = data.valueForKeyPath("uuid") as? String
@@ -69,7 +67,7 @@ class P2PayClient: NSObject {
         let dic = NSDictionary()
         dic.setValue(data.type, forKey: "type")
         dic.setValue(data.data(), forKey: "data")
-       delegate?.didSendData(dic)
+       delegate?.willSendData(dic)
     }
     
     

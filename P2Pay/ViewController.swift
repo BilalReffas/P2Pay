@@ -27,22 +27,6 @@ class ViewController: UIViewController,PPKControllerDelegate,MessagingDelegate,U
         super.didReceiveMemoryWarning()
     }
     
-    func p2pPeerDiscovered(peer: PPKPeer!) {
-        let discoveryInfoString = NSString(data: peer.discoveryInfo, encoding:NSUTF8StringEncoding)
-        guard let discoveryString = discoveryInfoString else {print("No DiscoveryString...");return}
-        print("Is here with discovery info: \(peer.peerID) \(discoveryString)")
-
-    }
-    
-    func p2pPeerLost(peer: PPKPeer!) {
-        print("Is no longer here 😞 \(peer.peerID)")
-    }
-
-    func didUpdateP2PDiscoveryInfoForPeer(peer: PPKPeer!) {
-        let discoveryInfo = NSString(data: peer.discoveryInfo, encoding: NSUTF8StringEncoding)
-        guard let discoveryString = discoveryInfo else {print("No DiscoveryInfo...");return}
-        print("Has updated discovery info: \(peer.peerID) \(discoveryString)")
-    }
     
     func messageReceived(messageBody: NSData!, header messageHeader: String!, from peerID: String!) {
         guard let messageText = NSString(data: messageBody, encoding: NSUTF8StringEncoding) else {print("Empty");return}
@@ -51,7 +35,7 @@ class ViewController: UIViewController,PPKControllerDelegate,MessagingDelegate,U
         print(messageText)
     }
     
-    func didSendData(data: NSDictionary) {
+    func willSendData(data: NSDictionary) {
 
     }
     
@@ -106,11 +90,10 @@ class ViewController: UIViewController,PPKControllerDelegate,MessagingDelegate,U
     }
     
     
-    func didReceivePOSIdentity(pos: POS) {
-        
-    }
     func didReceivePaymentRequest(paymentRequest: PaymentRequest) {
         
     }
+    
+    
 }
 
