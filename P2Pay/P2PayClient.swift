@@ -8,11 +8,11 @@
 
 import UIKit
 
+@objc
 protocol MessagingDelegate {
     func didSendData(data: NSDictionary)
-    
-    func didReceivePOSIdentity(pos: POS)
-    func didReceivePaymentRequest(paymentRequest: PaymentRequest)
+    optional func didReceivePOSIdentity(pos: POS)
+    optional func didReceivePaymentRequest(paymentRequest: PaymentRequest)
 }
 
 class P2PayClient: NSObject {

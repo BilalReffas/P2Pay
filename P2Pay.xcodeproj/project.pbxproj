@@ -76,6 +76,7 @@
 		509663EB1BB7165300AE987E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = P2Pay/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		509663ED1BB7181800AE987E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = P2Pay/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		509663F01BB7319F00AE987E /* CouponCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
+		509663F21BB73B1700AE987E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A650A60E1BB6DD1A005288FA /* P2PayClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P2PayClient.swift; sourceTree = "<group>"; };
 		A650A6111BB6DDF6005288FA /* PaymentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
 		A650A6191BB722A4005288FA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +156,7 @@
 			children = (
 				509663EF1BB72BBA00AE987E /* MainClient */,
 				A650A6191BB722A4005288FA /* LoginViewController.swift */,
+				509663F21BB73B1700AE987E /* ViewController.swift */,
 				509663A11BB6D35200AE987E /* Main.storyboard */,
 				509663F01BB7319F00AE987E /* CouponCell.swift */,
 				509663A41BB6D35200AE987E /* Assets.xcassets */,
