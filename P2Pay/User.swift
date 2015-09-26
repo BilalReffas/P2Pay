@@ -11,7 +11,7 @@ import UIKit
 class User: NSObject, Serializable {
     var type = "user_identity"
     var name: String?
-    var avatar: UIImage?
+    var facebookID: String?
     let peerID: String
     
     init(peerID: String) {
@@ -19,7 +19,10 @@ class User: NSObject, Serializable {
     }
     
     func data() -> NSDictionary {
-        return NSDictionary()
+        let dict = NSDictionary()
+        dict.setValue(self.name, forKey: "name")
+        dict.setValue(self.facebookID, forKey: "facebook_id")
+        return dict
     }
 
 }

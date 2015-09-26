@@ -9,9 +9,9 @@
 import UIKit
 
 class PaymentResponse: NSObject, Serializable {
-    enum PaymentStatus {
-        case Accept
-        case Decline
+    enum PaymentStatus: String {
+        case Accept = "accept"
+        case Decline = "decline"
     }
     var uuid: String?
     var coupons: [Coupon] = []
@@ -19,6 +19,10 @@ class PaymentResponse: NSObject, Serializable {
     
     var type: String = "payment_response"
     func data() -> NSDictionary {
-        return NSDictionary()
+        let dict = NSDictionary()
+        dict.setValue(self.uuid, forKey: "uuid")
+        dict.setValue(self.status?.rawValue, forKey: "status")
+        dict.setValue(self.coupons.map({return $0.id}), forKey: "coupons")
+        return dict
     }
 }
