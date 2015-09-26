@@ -26,8 +26,8 @@
 		509663F11BB7319F00AE987E /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509663F01BB7319F00AE987E /* CouponCell.swift */; settings = {ASSET_TAGS = (); }; };
 		A650A60F1BB6DD1A005288FA /* P2PayClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A60E1BB6DD1A005288FA /* P2PayClient.swift */; settings = {ASSET_TAGS = (); }; };
 		A650A6121BB6DDF6005288FA /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A6111BB6DDF6005288FA /* PaymentResponse.swift */; settings = {ASSET_TAGS = (); }; };
-		A650A6161BB6F48C005288FA /* Typeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A6151BB6F48C005288FA /* Typeable.swift */; settings = {ASSET_TAGS = (); }; };
 		A650A61A1BB722A4005288FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A6191BB722A4005288FA /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A697C5871BB73A8600918656 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697C5861BB73A8600918656 /* Serializable.swift */; settings = {ASSET_TAGS = (); }; };
 		A6BD0F221BB6D5BB00B78627 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F211BB6D5BB00B78627 /* User.swift */; settings = {ASSET_TAGS = (); }; };
 		A6BD0F241BB6D5CD00B78627 /* POS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F231BB6D5CD00B78627 /* POS.swift */; settings = {ASSET_TAGS = (); }; };
 		A6BD0F261BB6D5F400B78627 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F251BB6D5F400B78627 /* Coupon.swift */; settings = {ASSET_TAGS = (); }; };
@@ -78,8 +78,8 @@
 		509663F01BB7319F00AE987E /* CouponCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
 		A650A60E1BB6DD1A005288FA /* P2PayClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P2PayClient.swift; sourceTree = "<group>"; };
 		A650A6111BB6DDF6005288FA /* PaymentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
-		A650A6151BB6F48C005288FA /* Typeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typeable.swift; sourceTree = "<group>"; };
 		A650A6191BB722A4005288FA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A697C5861BB73A8600918656 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		A6BD0F211BB6D5BB00B78627 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A6BD0F231BB6D5CD00B78627 /* POS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POS.swift; sourceTree = "<group>"; };
 		A6BD0F251BB6D5F400B78627 /* Coupon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
@@ -208,9 +208,9 @@
 				A6BD0F211BB6D5BB00B78627 /* User.swift */,
 				A6BD0F231BB6D5CD00B78627 /* POS.swift */,
 				A6BD0F251BB6D5F400B78627 /* Coupon.swift */,
+				A697C5861BB73A8600918656 /* Serializable.swift */,
 				A6BD0F271BB6D61A00B78627 /* PaymentRequest.swift */,
 				A650A6111BB6DDF6005288FA /* PaymentResponse.swift */,
-				A650A6151BB6F48C005288FA /* Typeable.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -346,8 +346,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A697C5871BB73A8600918656 /* Serializable.swift in Sources */,
 				A6BD0F281BB6D61A00B78627 /* PaymentRequest.swift in Sources */,
-				A650A6161BB6F48C005288FA /* Typeable.swift in Sources */,
 				509663F11BB7319F00AE987E /* CouponCell.swift in Sources */,
 				A6BD0F261BB6D5F400B78627 /* Coupon.swift in Sources */,
 				509663A01BB6D35200AE987E /* ViewController.swift in Sources */,
