@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController,PPKControllerDelegate {
 
+    let p2payClient = P2PayClient.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        p2payClient.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -42,12 +45,14 @@ class ViewController: UIViewController,PPKControllerDelegate {
     
     func messageReceived(messageBody: NSData!, header messageHeader: String!, from peerID: String!) {
         guard let messageText = NSString(data: messageBody, encoding: NSUTF8StringEncoding) else {return}
-        print("Get message from : \(peerID) with text : \(messageText) and header : \(messageHeader)")
+        let data = ["type" : "t"]
+        p2payClient.receiveData(data)
     }
     
-    @IBAction func pressed(sender: AnyObject) {
-         PPKController.sendMessage(NSData(), withHeader: "", to: "")
+    func didSendData(data: NSDictionary) {
+        PPKController.sendMessage(NSData(), withHeader: "", to: "")
     }
+    
     
 }
 
