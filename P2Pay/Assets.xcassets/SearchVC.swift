@@ -16,14 +16,39 @@ class SearchVC: UIViewController, PPKControllerDelegate,MessagingDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         p2payClient.delegate = self
+        PPKControllerInitialized()
         PPKController.addObserver(self)
+    }
+    
+    func p2pDiscoveryStateChanged(state: PPKPeer2PeerDiscoveryState) {
+        if state == PPKPeer2PeerDiscoveryState.Running{
+            print("Peer2Peer Is Running")
+        }else if state == PPKPeer2PeerDiscoveryState.Stopped{
+            print("Peer2Peer Is stopped")
+        }else if state == PPKPeer2PeerDiscoveryState.Suspended{
+            print("Peer2Peer Is suspended")
+        }
+    }
+    
+    func onlineMessagingStateChanged(state: PPKOnlineMessagingState) {
+        if state == PPKOnlineMessagingState.Running{
+            print("Messaging Is Running")
+        }else if state == PPKOnlineMessagingState.Stopped{
+            print("Messaging Is stopped")
+        }else if state == PPKOnlineMessagingState.Suspended{
+            print("Messaging Is suspended")
+        }
+        PPKControllerInitialized()
+        
     }
     
     func p2pPeerDiscovered(peer: PPKPeer!) {
         let discoveryInfoString = NSString(data: peer.discoveryInfo, encoding:NSUTF8StringEncoding)
         guard let discoveryString = discoveryInfoString else {print("No DiscoveryString...");return}
         print("Is here with discovery info: \(peer.peerID) \(discoveryString)")
-        p2payClient.pos.peerID = peer.peerID
+        if (discoveryInfoString == "pos") {
+            p2payClient.pos.peerID = peer.peerID
+        }
     }
     
     func p2pPeerLost(peer: PPKPeer!) {
@@ -63,5 +88,10 @@ class SearchVC: UIViewController, PPKControllerDelegate,MessagingDelegate {
         vc.coupons = p2payClient.pos.coupons
     }
     
-
+    
+    func PPKControllerInitialized() {
+        PPKController.startP2PDiscovery()
+        PPKController.startOnlineMessaging()
+        PPKController.startP2PDiscoveryWithDiscoveryInfo("Aley jetzt Info".dataUsingEncoding(NSUTF8StringEncoding))
+    }
 }

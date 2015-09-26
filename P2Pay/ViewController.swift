@@ -39,29 +39,6 @@ class ViewController: UIViewController,PPKControllerDelegate,MessagingDelegate,U
 
     }
     
-    func p2pDiscoveryStateChanged(state: PPKPeer2PeerDiscoveryState) {
-        if state == PPKPeer2PeerDiscoveryState.Running{
-            print("Peer2Peer Is Running")
-        }else if state == PPKPeer2PeerDiscoveryState.Stopped{
-            print("Peer2Peer Is stopped")
-        }else if state == PPKPeer2PeerDiscoveryState.Suspended{
-            print("Peer2Peer Is suspended")
-        }
-    }
-    
-    func onlineMessagingStateChanged(state: PPKOnlineMessagingState) {
-        if state == PPKOnlineMessagingState.Running{
-            print("Messaging Is Running")
-            PPKController.sendMessage("hallo slex du spasst".dataUsingEncoding(NSUTF8StringEncoding), withHeader: "", to: p2payClient.pos.peerID)
-        }else if state == PPKOnlineMessagingState.Stopped{
-            print("Messaging Is stopped")
-        }else if state == PPKOnlineMessagingState.Suspended{
-            print("Messaging Is suspended")
-        }
-        PPKControllerInitialized()
-        
-    }
-    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coupons.count
