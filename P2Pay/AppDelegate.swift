@@ -16,18 +16,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PPKControllerDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     PPKController.enableWithConfiguration("eyJzaWduYXR1cmUiOiJRdEVtb09vR3orci9ockI1WUFXTWxvLzh4MC9lY2xEd0M0bUhNcnRwWnJDRk55bStDcDEzeGpEYTNXM096S0taTHJxN0RMa0VDWUtpRTEwYU0ycytRR1RRVkYvWVhWZlk2Ni9xajJKZ2lyWjcxbVlnQ0ptVkV3bFNlSWFVUWlqWHFjZXN5VGYrYkEvQzNVWWp2UlRzZkZTRjhCRFJuNFBuY1IyaVFVUkNyTmc9IiwiYXBwSWQiOjEyNDMsInZhbGlkVW50aWwiOjE2NzkwLCJhcHBVVVVJRCI6IkFGRERCMkRFLTc4OTYtNDMxNC1BQjNDLTk4REIyRkU1MTdGRCJ9", observer: self)
+    
         
-        PPKControllerInitialized()
-        
-        return true
+    
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
+    
+    func p2pDiscoveryStateChanged(state: PPKPeer2PeerDiscoveryState) {
+        if state == PPKPeer2PeerDiscoveryState.Running{
+            print("Peer2Peer Is Running")
+        }else if state == PPKPeer2PeerDiscoveryState.Stopped{
+            print("Peer2Peer Is stopped")
+        }else if state == PPKPeer2PeerDiscoveryState.Suspended{
+            print("Peer2Peer Is suspended")
+        }
+    }
+    
+    func onlineMessagingStateChanged(state: PPKOnlineMessagingState) {
+        if state == PPKOnlineMessagingState.Running{
+            print("Messaging Is Running")
+            PPKController.sendMessage("hallo slex du spasst".dataUsingEncoding(NSUTF8StringEncoding), withHeader: "", to: "647bfb57-bf33-44d9-96be-44756d656e69")
+        }else if state == PPKOnlineMessagingState.Stopped{
+            print("Messaging Is stopped")
+        }else if state == PPKOnlineMessagingState.Suspended{
+            print("Messaging Is suspended")
+        }
+    }
+    
     
     func PPKControllerInitialized() {
         PPKController.startP2PDiscovery()
-        PPKController.startGeoDiscovery()
         PPKController.startOnlineMessaging()
+        PPKController.startP2PDiscoveryWithDiscoveryInfo("Aley jetzt Info".dataUsingEncoding(NSUTF8StringEncoding))
     }
-
+    
+    func application(application: UIApplication,
+        openURL url: NSURL,
+        sourceApplication: String?,
+        annotation: AnyObject) -> Bool {
+            return FBSDKApplicationDelegate.sharedInstance().application(
+                application,
+                openURL: url,
+                sourceApplication: sourceApplication,
+                annotation: annotation)
+    }
+    
+    func PPKControllerFailedWithError(error: NSError!) {
+        print("\(error.localizedDescription)")
+    }
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

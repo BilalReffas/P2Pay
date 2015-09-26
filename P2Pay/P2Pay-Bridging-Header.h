@@ -10,5 +10,6 @@
 #define Crowdfinding_Bridging_Header_h
 
 #import <P2PKit/P2Pkit.h>
-
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 #endif /* Crowdfinding_Bridging_Header_h */
