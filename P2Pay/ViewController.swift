@@ -105,5 +105,12 @@ class ViewController: UIViewController,PPKControllerDelegate,MessagingDelegate,U
         PPKController.startP2PDiscoveryWithDiscoveryInfo("Aley jetzt Info".dataUsingEncoding(NSUTF8StringEncoding))
     }
     
+    
+    func didReceivePOSIdentity(pos: POS) {
+        
+    }
+    func didReceivePaymentRequest(paymentRequest: PaymentRequest) {
+        
+    }
 }
 
