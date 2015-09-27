@@ -66,7 +66,7 @@ class P2PayClient: NSObject {
     }
     
     private func sendData(data: Serializable){
-        let dic = NSDictionary()
+        let dic = NSMutableDictionary()
         dic.setValue(data.type, forKey: "type")
         dic.setValue(data.data(), forKey: "data")
        delegate?.willSendData(dic)

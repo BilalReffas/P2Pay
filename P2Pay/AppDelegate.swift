@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PPKControllerDelegate,GIDS
 
         
         P2PayClient.sharedInstance.me = User(peerID: PPKController.myPeerID())
-    
+
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     
     }
