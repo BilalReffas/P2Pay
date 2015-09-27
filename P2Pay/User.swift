@@ -19,7 +19,7 @@ class User: NSObject, Serializable {
     }
     
     func data() -> NSDictionary {
-        let dict = NSDictionary()
+        let dict = NSMutableDictionary()
         dict.setValue(self.name, forKey: "name")
         dict.setValue(self.facebookID, forKey: "facebook_id")
         return dict

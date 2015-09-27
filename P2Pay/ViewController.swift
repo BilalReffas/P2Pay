@@ -36,7 +36,7 @@ class ViewController: UIViewController,PPKControllerDelegate,MessagingDelegate,U
     }
     
     func willSendData(data: NSDictionary) {
-
+        
     }
     
     
@@ -57,15 +57,6 @@ class ViewController: UIViewController,PPKControllerDelegate,MessagingDelegate,U
         
         return cell
     }
-    
-    
-    
-    func PPKControllerInitialized() {
-        PPKController.startP2PDiscovery()
-        PPKController.startOnlineMessaging()
-        PPKController.startP2PDiscoveryWithDiscoveryInfo("Aley jetzt Info".dataUsingEncoding(NSUTF8StringEncoding))
-    }
-    
     
     func didReceivePaymentRequest(paymentRequest: PaymentRequest) {
         
