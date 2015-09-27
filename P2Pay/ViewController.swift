@@ -27,22 +27,6 @@ class ViewController: UIViewController,PPKControllerDelegate,MessagingDelegate,U
         super.didReceiveMemoryWarning()
     }
     
-    func p2pPeerDiscovered(peer: PPKPeer!) {
-        let discoveryInfoString = NSString(data: peer.discoveryInfo, encoding:NSUTF8StringEncoding)
-        guard let discoveryString = discoveryInfoString else {print("No DiscoveryString...");return}
-        print("Is here with discovery info: \(peer.peerID) \(discoveryString)")
-
-    }
-    
-    func p2pPeerLost(peer: PPKPeer!) {
-        print("Is no longer here 😞 \(peer.peerID)")
-    }
-
-    func didUpdateP2PDiscoveryInfoForPeer(peer: PPKPeer!) {
-        let discoveryInfo = NSString(data: peer.discoveryInfo, encoding: NSUTF8StringEncoding)
-        guard let discoveryString = discoveryInfo else {print("No DiscoveryInfo...");return}
-        print("Has updated discovery info: \(peer.peerID) \(discoveryString)")
-    }
     
     func messageReceived(messageBody: NSData!, header messageHeader: String!, from peerID: String!) {
         guard let messageText = NSString(data: messageBody, encoding: NSUTF8StringEncoding) else {print("Empty");return}
@@ -51,31 +35,8 @@ class ViewController: UIViewController,PPKControllerDelegate,MessagingDelegate,U
         print(messageText)
     }
     
-    func didSendData(data: NSDictionary) {
+    func willSendData(data: NSDictionary) {
 
-    }
-    
-    func p2pDiscoveryStateChanged(state: PPKPeer2PeerDiscoveryState) {
-        if state == PPKPeer2PeerDiscoveryState.Running{
-            print("Peer2Peer Is Running")
-        }else if state == PPKPeer2PeerDiscoveryState.Stopped{
-            print("Peer2Peer Is stopped")
-        }else if state == PPKPeer2PeerDiscoveryState.Suspended{
-            print("Peer2Peer Is suspended")
-        }
-    }
-    
-    func onlineMessagingStateChanged(state: PPKOnlineMessagingState) {
-        if state == PPKOnlineMessagingState.Running{
-            print("Messaging Is Running")
-            PPKController.sendMessage("hallo slex du spasst".dataUsingEncoding(NSUTF8StringEncoding), withHeader: "", to: "647bfb57-bf33-44d9-96be-44756d656e69")
-        }else if state == PPKOnlineMessagingState.Stopped{
-            print("Messaging Is stopped")
-        }else if state == PPKOnlineMessagingState.Suspended{
-            print("Messaging Is suspended")
-        }
-        PPKControllerInitialized()
-        
     }
     
     
@@ -106,11 +67,10 @@ class ViewController: UIViewController,PPKControllerDelegate,MessagingDelegate,U
     }
     
     
-    func didReceivePOSIdentity(pos: POS) {
-        
-    }
     func didReceivePaymentRequest(paymentRequest: PaymentRequest) {
         
     }
+    
+    
 }
 
