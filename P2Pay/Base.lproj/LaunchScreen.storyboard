@@ -25,12 +25,19 @@
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="49"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay secure and fast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zg-PH-Wp2">
+                                <rect key="frame" x="174" y="321" width="253" height="37.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="31"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TOC-Ou-ZrH" firstAttribute="top" secondItem="bhm-i5-dFb" secondAttribute="bottom" constant="8" id="2FA-Ym-BdQ"/>
+                            <constraint firstItem="0zg-PH-Wp2" firstAttribute="centerX" secondItem="EPN-7r-BUd" secondAttribute="centerX" id="R2B-QF-e64"/>
                             <constraint firstItem="bhm-i5-dFb" firstAttribute="centerX" secondItem="EPN-7r-BUd" secondAttribute="centerX" id="Wb9-hh-57I"/>
                             <constraint firstItem="bhm-i5-dFb" firstAttribute="top" secondItem="JtG-4m-8uQ" secondAttribute="bottom" constant="51" id="kPm-LK-FQs"/>
+                            <constraint firstItem="0zg-PH-Wp2" firstAttribute="top" secondItem="TOC-Ou-ZrH" secondAttribute="bottom" constant="33" id="y1D-Jl-Jsg"/>
                             <constraint firstItem="TOC-Ou-ZrH" firstAttribute="centerX" secondItem="EPN-7r-BUd" secondAttribute="centerX" id="z9r-h5-XV6"/>
                         </constraints>
                     </view>

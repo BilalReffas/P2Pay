@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VYC-Cl-KvO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dRN-RY-e0e">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -106,6 +106,7 @@
                     <connections>
                         <outlet property="headerImage" destination="jFQ-Z7-cg7" id="adp-PH-DaC"/>
                         <outlet property="tableView" destination="TRU-Mf-5o5" id="4vv-VQ-OWA"/>
+                        <segue destination="dRN-RY-e0e" kind="presentation" identifier="showAmount" id="EME-4i-Rya"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -127,6 +128,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syn-aA-CH4">
                                 <rect key="frame" x="148" y="460" width="85" height="85"/>
                                 <state key="normal" image="error_graphical_256"/>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="dRN-RY-e0e" eventType="touchUpInside" id="BgF-nk-Lci"/>
+                                </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="laughing_graphical_256" translatesAutoresizingMaskIntoConstraints="NO" id="Bwz-7v-lTG">
                                 <rect key="frame" x="258" y="257" width="85" height="85"/>
@@ -146,6 +150,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYZ-sM-HJS">
                                 <rect key="frame" x="359" y="460" width="85" height="85"/>
                                 <state key="normal" image="success_graphical_256"/>
+                                <connections>
+                                    <action selector="checkmarkPressed:" destination="dRN-RY-e0e" eventType="touchUpInside" id="KOJ-u6-8Z8"/>
+                                </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="smallP2Pay" translatesAutoresizingMaskIntoConstraints="NO" id="NIn-G4-Quv">
                                 <rect key="frame" x="424" y="47" width="25" height="25"/>
@@ -167,6 +174,9 @@
                             <constraint firstItem="TYZ-sM-HJS" firstAttribute="centerX" secondItem="nzn-e6-aVF" secondAttribute="centerX" constant="101.5" id="ua3-iR-hgg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="o4H-nD-ZlI" id="KB0-Ir-Twg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4J-55-NeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

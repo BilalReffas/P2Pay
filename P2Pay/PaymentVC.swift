@@ -7,29 +7,51 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class PaymentVC: UIViewController {
 
+    @IBOutlet weak var amountLabel: UILabel!
+    var myLocalizedReasonString : NSString = "Authentication is required for payment"
+    let context : LAContext = LAContext()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        authenticateUser()
+    }
+    
+    func authenticateUser() {
+        if context.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics,error: nil) {
+            context.evaluatePolicy(
+                LAPolicy.DeviceOwnerAuthenticationWithBiometrics,
+                localizedReason: "Authentication is required for payment",
+                reply: {(success, error) in
+                    // Code to handle reply here
+            })
+        } else {
+           print("TouchID not available not iDevice..")
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func resetTouchID() {
+    
+        
     }
-    */
+
+    @IBAction func cancelPressed(sender: AnyObject) {
+    }
+
+    @IBAction func checkmarkPressed(sender: AnyObject) {
+    }
 
 }
