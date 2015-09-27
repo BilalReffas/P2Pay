@@ -20,7 +20,7 @@ class ViewController: UIViewController,PPKControllerDelegate,MessagingDelegate,U
         super.viewDidLoad()
         p2payClient.delegate = self
         PPKController.addObserver(self)
-         tableView.delegate = self
+        tableView.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
