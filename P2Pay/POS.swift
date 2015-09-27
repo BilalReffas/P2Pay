@@ -10,7 +10,7 @@ import UIKit
 
 class POS: NSObject {
     var name: String?
-    var logo: UIImage?
+    var logo: String?
     var colorCode: String?
     var coupons: [Coupon] = []
     var peerID: String?

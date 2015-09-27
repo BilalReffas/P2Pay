@@ -46,7 +46,7 @@ class SearchVC: UIViewController, PPKControllerDelegate,MessagingDelegate {
         let discoveryInfoString = NSString(data: peer.discoveryInfo, encoding:NSUTF8StringEncoding)
         guard let discoveryString = discoveryInfoString else {print("No DiscoveryString...");return}
         print("Is here with discovery info: \(peer.peerID) \(discoveryString)")
-        if (discoveryInfoString == "pos") {
+        if (discoveryInfoString == "POS") {
             p2payClient.pos.peerID = peer.peerID
         }
     }
@@ -71,7 +71,8 @@ class SearchVC: UIViewController, PPKControllerDelegate,MessagingDelegate {
     }
     
     func didReceivePOSIdentity(pos: POS) {
-        self.performSegueWithIdentifier("openSearch", sender: self)
+        p2payClient.sendUserInformation()
+        self.performSegueWithIdentifier("openMain", sender: self)
     }
     
     func willSendData(data: NSDictionary) {

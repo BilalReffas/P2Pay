@@ -43,7 +43,7 @@ class P2PayClient: NSObject {
         if (type == "pos_identity") {
             pos.name = data.valueForKeyPath("name") as? String
             pos.colorCode = data.valueForKeyPath("color_code") as? String
-            //p.avatar = data.valueForKeyPath("avatar") as? String
+            pos.logo = data.valueForKeyPath("logo") as? String
             if let coupons = data.valueForKeyPath("coupons") as? [NSDictionary] {
                 for coupon in coupons {
                     let c = Coupon()
@@ -53,13 +53,15 @@ class P2PayClient: NSObject {
                     pos.coupons.append(c)
                 }
             }
-            delegate?.didReceivePOSIdentity!(pos)
+            
+              delegate?.didReceivePOSIdentity?(pos)
+            
         } else if (type == "payment_request") {
             let paymentRequest = PaymentRequest()
             paymentRequest.uuid     = data.valueForKeyPath("uuid") as? String
             paymentRequest.amount   = data.valueForKeyPath("amount") as? Double
             paymentRequest.currency = data.valueForKeyPath("currency") as? String
-            delegate?.didReceivePaymentRequest!(paymentRequest)
+            delegate?.didReceivePaymentRequest?(paymentRequest)
         }
     }
     
