@@ -23,6 +23,7 @@ class SearchVC: UIViewController, PPKControllerDelegate,MessagingDelegate {
     func p2pDiscoveryStateChanged(state: PPKPeer2PeerDiscoveryState) {
         if state == PPKPeer2PeerDiscoveryState.Running{
             print("Peer2Peer Is Running")
+            PPKController.startP2PDiscoveryWithDiscoveryInfo("User".dataUsingEncoding(NSUTF8StringEncoding))
         }else if state == PPKPeer2PeerDiscoveryState.Stopped{
             print("Peer2Peer Is stopped")
         }else if state == PPKPeer2PeerDiscoveryState.Suspended{
@@ -94,6 +95,9 @@ class SearchVC: UIViewController, PPKControllerDelegate,MessagingDelegate {
     func PPKControllerInitialized() {
         PPKController.startP2PDiscovery()
         PPKController.startOnlineMessaging()
+<<<<<<< HEAD
+=======
         PPKController.startP2PDiscoveryWithDiscoveryInfo("User".dataUsingEncoding(NSUTF8StringEncoding))
+>>>>>>> 79590686048fd8b93efd477dae0b383e65d6966e
     }
 }
