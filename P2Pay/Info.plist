@@ -26,6 +26,22 @@
 				<string>fb522906931196902</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.1031181075806-al8vdo83ftipiqnajs8mqm2ogun1uk9i</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>de.Bilal-Karim-Reffas.P2Pay</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
@@ -33,9 +49,19 @@
 	<string>522906931196902</string>
 	<key>FacebookDisplayName</key>
 	<string>P2Pay</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbauth2</string>
+		<string>googlechrome</string>
+		<string>googlechrome-x-callback</string>
+		<string>hasgplus4</string>
+		<string>com.google.gppconsent</string>
+		<string>com.google.gppconsent.2.2.0</string>
+		<string>com.google.gppconsent.2.3.0</string>
+		<string>com.google.gppconsent.2.4.0</string>
+		<string>com.google.gppconsent.2.4.1</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
