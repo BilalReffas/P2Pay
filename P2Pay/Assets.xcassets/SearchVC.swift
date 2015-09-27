@@ -94,9 +94,5 @@ class SearchVC: UIViewController, PPKControllerDelegate,MessagingDelegate {
     func PPKControllerInitialized() {
         PPKController.startP2PDiscovery()
         PPKController.startOnlineMessaging()
-<<<<<<< HEAD
-=======
-        PPKController.startP2PDiscoveryWithDiscoveryInfo("User".dataUsingEncoding(NSUTF8StringEncoding))
->>>>>>> 79590686048fd8b93efd477dae0b383e65d6966e
     }
 }

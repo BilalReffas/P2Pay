@@ -20,14 +20,20 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate,GIDSignInU
         self.view.addSubview(loginButton)
         loginButton.readPermissions = ["public_profile"]
         loginButton.delegate = self
-       
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().clientID = "1031181075806-al8vdo83ftipiqnajs8mqm2ogun1uk9i.apps.googleusercontent.com"
-        GIDSignIn.sharedInstance().signInSilently()
+        //GIDSignIn.sharedInstance().signIn()
+        
+        let button = GIDSignInButton()
+        button.center = CGPointMake(self.view.center.x, self.view.center.y + 150)
+        self.view.addSubview(button)
     }
     
 
     func signInWillDispatch(signIn: GIDSignIn!, error: NSError!) {
+        if let error = error{
+            print("\(error.localizedDescription)")
+        }
     }
     
     // Present a view that prompts the user to sign in with Google
@@ -48,7 +54,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate,GIDSignInU
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             if ((error) != nil)
             {
-                // Process error
                 print("Error: \(error)")
             } else {
                 print("fetched user: \(result)")

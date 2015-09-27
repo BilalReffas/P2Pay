@@ -31,7 +31,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.1031181075806-al8vdo83ftipiqnajs8mqm2ogun1uk9i</string>
+				<string>1031181075806-al8vdo83ftipiqnajs8mqm2ogun1uk9i.apps.googleusercontent.com</string>
 			</array>
 		</dict>
 		<dict>
@@ -54,8 +54,8 @@
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbauth2</string>
-		<string>googlechrome</string>
-		<string>googlechrome-x-callback</string>
+		<string>com-google-gidconsent-google</string>
+		<string>com-google-gidconsent</string>
 		<string>hasgplus4</string>
 		<string>com.google.gppconsent</string>
 		<string>com.google.gppconsent.2.2.0</string>
