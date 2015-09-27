@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PPKControllerDelegate{
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     PPKController.enableWithConfiguration("eyJzaWduYXR1cmUiOiJRdEVtb09vR3orci9ockI1WUFXTWxvLzh4MC9lY2xEd0M0bUhNcnRwWnJDRk55bStDcDEzeGpEYTNXM096S0taTHJxN0RMa0VDWUtpRTEwYU0ycytRR1RRVkYvWVhWZlk2Ni9xajJKZ2lyWjcxbVlnQ0ptVkV3bFNlSWFVUWlqWHFjZXN5VGYrYkEvQzNVWWp2UlRzZkZTRjhCRFJuNFBuY1IyaVFVUkNyTmc9IiwiYXBwSWQiOjEyNDMsInZhbGlkVW50aWwiOjE2NzkwLCJhcHBVVVVJRCI6IkFGRERCMkRFLTc4OTYtNDMxNC1BQjNDLTk4REIyRkU1MTdGRCJ9", observer: self)
     
-
         
         P2PayClient.sharedInstance.me = User(peerID: PPKController.myPeerID())
 
@@ -25,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PPKControllerDelegate{
     
     }
     
+
+
     
     func application(application: UIApplication,
         openURL url: NSURL,
