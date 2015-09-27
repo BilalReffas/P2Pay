@@ -19,7 +19,7 @@ class PaymentResponse: NSObject, Serializable {
     
     var type: String = "payment_response"
     func data() -> NSDictionary {
-        let dict = NSDictionary()
+        let dict = NSMutableDictionary()
         dict.setValue(self.uuid, forKey: "uuid")
         dict.setValue(self.status?.rawValue, forKey: "status")
         dict.setValue(self.coupons.map({return $0.id}), forKey: "coupons")

@@ -66,8 +66,8 @@ class SearchVC: UIViewController, PPKControllerDelegate,MessagingDelegate {
         do {
             let dic = try NSJSONSerialization.JSONObjectWithData(messageBody, options: .AllowFragments) as! NSDictionary
             self.p2payClient.receiveData(dic)
-        } catch _ {
-            print("Error")
+        } catch let error as NSError {
+            print(error)
         }
     }
     
@@ -79,9 +79,9 @@ class SearchVC: UIViewController, PPKControllerDelegate,MessagingDelegate {
     func willSendData(data: NSDictionary) {
         do {
             let rawData = try NSJSONSerialization.dataWithJSONObject(data, options: .PrettyPrinted)
-            PPKController.sendMessage(rawData, withHeader: nil, to: p2payClient.pos.peerID)
-        } catch _ {
-            print("Error")
+            PPKController.sendMessage(rawData, withHeader: "", to: p2payClient.pos.peerID)
+        } catch let error as NSError {
+            print(error)
         }
     }
     
@@ -94,5 +94,9 @@ class SearchVC: UIViewController, PPKControllerDelegate,MessagingDelegate {
     func PPKControllerInitialized() {
         PPKController.startP2PDiscovery()
         PPKController.startOnlineMessaging()
+<<<<<<< HEAD
+=======
+        PPKController.startP2PDiscoveryWithDiscoveryInfo("User".dataUsingEncoding(NSUTF8StringEncoding))
+>>>>>>> 79590686048fd8b93efd477dae0b383e65d6966e
     }
 }
