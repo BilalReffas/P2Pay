@@ -18,6 +18,11 @@ class SearchVC: UIViewController, PPKControllerDelegate,MessagingDelegate {
         p2payClient.delegate = self
         PPKControllerInitialized()
         PPKController.addObserver(self)
+        
+        self.delay(3.0){
+            self.performSegueWithIdentifier("showCoupons", sender: nil)
+
+        }
     }
     
     func p2pDiscoveryStateChanged(state: PPKPeer2PeerDiscoveryState) {
@@ -86,14 +91,22 @@ class SearchVC: UIViewController, PPKControllerDelegate,MessagingDelegate {
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let vc = segue.destinationViewController as! ViewController
-        vc.coupons = p2payClient.pos.coupons
-    }
+
     
     
     func PPKControllerInitialized() {
         PPKController.startP2PDiscovery()
         PPKController.startOnlineMessaging()
     }
+    
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+
 }

@@ -17,7 +17,9 @@ class CouponsTVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        delay(5.0){
+            self.performSegueWithIdentifier("showAmount", sender: nil)
+        }
         
     }
 
@@ -51,9 +53,14 @@ class CouponsTVC: UITableViewController {
     
     
     
-
-
-    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
 
 
 }

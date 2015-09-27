@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VYC-Cl-KvO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -158,30 +158,7 @@
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="Q60-n7-hQs">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="92" id="NFh-ZG-s6b" customClass="CouponCell" customModule="P2Pay" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="361.5" width="600" height="92"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NFh-ZG-s6b" id="9Zj-Sl-rtN">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="91.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hn7-55-yPc">
-                                                    <rect key="frame" x="257.5" y="3" width="85" height="85"/>
-                                                    <state key="normal" image="coupon_graphical_256"/>
-                                                    <connections>
-                                                        <segue destination="dRN-RY-e0e" kind="presentation" id="Sfs-3B-9hG"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstItem="Hn7-55-yPc" firstAttribute="centerX" secondItem="9Zj-Sl-rtN" secondAttribute="centerX" id="SCC-YP-Zlx"/>
-                                                <constraint firstItem="Hn7-55-yPc" firstAttribute="centerY" secondItem="9Zj-Sl-rtN" secondAttribute="centerY" id="zQk-2f-tAz"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
+                                <cells/>
                             </tableViewSection>
                         </sections>
                         <connections>
@@ -193,6 +170,7 @@
                         <outlet property="cellRewe1" destination="tuG-xB-sCD" id="aYa-rW-YhZ"/>
                         <outlet property="cellRewe2" destination="eO0-Cd-rqb" id="HjZ-Rk-zHy"/>
                         <outlet property="cellRewe3" destination="4FL-XD-TLs" id="YJ6-nv-g28"/>
+                        <segue destination="dRN-RY-e0e" kind="presentation" identifier="showAmount" id="8f3-Vt-6a1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="beJ-8T-IRo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -335,6 +313,9 @@
                             <constraint firstItem="86c-MX-i3c" firstAttribute="top" secondItem="bOP-gH-QQi" secondAttribute="bottom" constant="40" id="vm1-3Z-2lq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="NC4-W3-Rfo" kind="presentation" identifier="showCoupons" id="dPd-2a-SnG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIU-cR-m1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -343,7 +324,6 @@
     </scenes>
     <resources>
         <image name="P2PayLogo" width="150" height="150"/>
-        <image name="coupon_graphical_256" width="85" height="85"/>
         <image name="error_graphical_256" width="85" height="85"/>
         <image name="laughing_graphical_256" width="85" height="85"/>
         <image name="rewew" width="829" height="293"/>
