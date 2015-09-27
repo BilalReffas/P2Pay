@@ -38,8 +38,8 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUU-hn-CfL">
                                                     <rect key="frame" x="110" y="14" width="482" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="11m-xy-sTk"/>
-                                                        <constraint firstAttribute="width" constant="482" id="GS7-ze-ymL"/>
+                                                        <constraint firstAttribute="height" constant="21" id="5kg-Sh-xPa"/>
+                                                        <constraint firstAttribute="width" constant="482" id="cEn-42-fV1"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -54,15 +54,15 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="HUU-hn-CfL" firstAttribute="trailing" secondItem="jjc-Lv-kaq" secondAttribute="trailingMargin" id="1Tx-0C-hXj"/>
+                                                <constraint firstItem="HUU-hn-CfL" firstAttribute="leading" secondItem="kwk-oX-gh7" secondAttribute="trailing" constant="65" id="Jyr-ga-Zzg"/>
+                                                <constraint firstItem="HUU-hn-CfL" firstAttribute="top" secondItem="jjc-Lv-kaq" secondAttribute="topMargin" constant="6" id="O9s-y8-y1o"/>
                                                 <constraint firstItem="kwk-oX-gh7" firstAttribute="centerY" secondItem="jjc-Lv-kaq" secondAttribute="centerY" id="T5p-Gk-xZ4"/>
-                                                <constraint firstItem="HUU-hn-CfL" firstAttribute="leading" secondItem="kwk-oX-gh7" secondAttribute="trailing" constant="65" id="c3s-wi-1ns"/>
-                                                <constraint firstItem="HUU-hn-CfL" firstAttribute="leading" secondItem="Cyp-VO-jLi" secondAttribute="leading" id="hJg-i7-oVt"/>
-                                                <constraint firstItem="Cyp-VO-jLi" firstAttribute="top" secondItem="HUU-hn-CfL" secondAttribute="bottom" constant="13" id="m37-sA-Nv1"/>
-                                                <constraint firstItem="HUU-hn-CfL" firstAttribute="top" secondItem="jjc-Lv-kaq" secondAttribute="topMargin" constant="6" id="rk3-xQ-dad"/>
-                                                <constraint firstItem="Cyp-VO-jLi" firstAttribute="trailing" secondItem="HUU-hn-CfL" secondAttribute="trailing" id="xlp-f2-9mm"/>
+                                                <constraint firstItem="Cyp-VO-jLi" firstAttribute="top" secondItem="HUU-hn-CfL" secondAttribute="bottom" constant="13" id="ae9-aX-Cz1"/>
+                                                <constraint firstItem="Cyp-VO-jLi" firstAttribute="leading" secondItem="HUU-hn-CfL" secondAttribute="leading" id="dPU-vc-6JH"/>
+                                                <constraint firstItem="HUU-hn-CfL" firstAttribute="trailing" secondItem="Cyp-VO-jLi" secondAttribute="trailing" id="g1j-l2-quw"/>
+                                                <constraint firstItem="HUU-hn-CfL" firstAttribute="trailing" secondItem="jjc-Lv-kaq" secondAttribute="trailingMargin" id="teJ-Jt-ddF"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Cyp-VO-jLi" secondAttribute="bottom" constant="10.5" id="wCj-Uy-29z"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="kwk-oX-gh7" secondAttribute="leading" id="zT0-q3-nGn"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Cyp-VO-jLi" secondAttribute="bottom" constant="10.5" id="zUa-ob-ZYf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

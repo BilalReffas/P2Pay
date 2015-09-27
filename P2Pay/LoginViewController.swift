@@ -23,7 +23,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().clientID = "1031181075806-al8vdo83ftipiqnajs8mqm2ogun1uk9i.apps.googleusercontent.com"
-        GIDSignIn.sharedInstance().signOut()
+        GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.login")
         let button = GIDSignInButton()
         button.center = CGPointMake(self.view.center.x, self.view.center.y + 150)
         self.view.addSubview(button)
@@ -32,6 +32,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
             getUserID()
         }
         
+        if GIDSignIn.sharedInstance().currentUser.profile.email
         
     }
     
