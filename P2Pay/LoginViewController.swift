@@ -8,7 +8,9 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
+
+
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate,GIDSignInUIDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +20,27 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         self.view.addSubview(loginButton)
         loginButton.readPermissions = ["public_profile"]
         loginButton.delegate = self
+       
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().clientID = "1031181075806-al8vdo83ftipiqnajs8mqm2ogun1uk9i.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().signInSilently()
     }
     
+
+    func signInWillDispatch(signIn: GIDSignIn!, error: NSError!) {
+    }
+    
+    // Present a view that prompts the user to sign in with Google
+    func signIn(signIn: GIDSignIn!,
+        presentViewController viewController: UIViewController!) {
+            self.presentViewController(viewController, animated: true, completion: nil)
+    }
+    
+    // Dismiss the "Sign in with Google" view
+    func signIn(signIn: GIDSignIn!,
+        dismissViewController viewController: UIViewController!) {
+            self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     func getUserID()
     {

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		502B4A2F1BB764B500916B9B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502B4A2E1BB764B500916B9B /* AddressBook.framework */; };
+		502B4A311BB764D400916B9B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502B4A301BB764D400916B9B /* StoreKit.framework */; };
+		502B4A331BB764DE00916B9B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502B4A321BB764DE00916B9B /* SystemConfiguration.framework */; };
+		502B4A361BB7662000916B9B /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 502B4A341BB7662000916B9B /* GoogleSignIn.bundle */; };
+		502B4A371BB7662000916B9B /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502B4A351BB7662000916B9B /* GoogleSignIn.framework */; };
 		5096639E1BB6D35200AE987E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5096639D1BB6D35200AE987E /* AppDelegate.swift */; };
 		509663A01BB6D35200AE987E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5096639F1BB6D35200AE987E /* ViewController.swift */; };
 		509663A31BB6D35200AE987E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509663A11BB6D35200AE987E /* Main.storyboard */; };
@@ -14,25 +19,25 @@
 		509663A81BB6D35200AE987E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509663A61BB6D35200AE987E /* LaunchScreen.storyboard */; };
 		509663B31BB6D35200AE987E /* P2PayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509663B21BB6D35200AE987E /* P2PayTests.swift */; };
 		509663BE1BB6D35200AE987E /* P2PayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509663BD1BB6D35200AE987E /* P2PayUITests.swift */; };
-		509663DB1BB6D9E600AE987E /* P2PKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663DA1BB6D9E600AE987E /* P2PKit.framework */; settings = {ASSET_TAGS = (); }; };
+		509663DB1BB6D9E600AE987E /* P2PKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663DA1BB6D9E600AE987E /* P2PKit.framework */; };
 		509663DE1BB6DB1800AE987E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663DD1BB6DB1800AE987E /* CoreBluetooth.framework */; };
 		509663E01BB6DB1D00AE987E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663DF1BB6DB1D00AE987E /* CoreLocation.framework */; };
 		509663E21BB6DB2B00AE987E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663E11BB6DB2B00AE987E /* CFNetwork.framework */; };
 		509663E41BB6DB3100AE987E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663E31BB6DB3100AE987E /* Security.framework */; };
 		509663E61BB6DB3900AE987E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663E51BB6DB3900AE987E /* Foundation.framework */; };
 		509663E81BB6DB4500AE987E /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663E71BB6DB4500AE987E /* libicucore.tbd */; };
-		509663EC1BB7165300AE987E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663EB1BB7165300AE987E /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
-		509663EE1BB7181800AE987E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663ED1BB7181800AE987E /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
-		509663F11BB7319F00AE987E /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509663F01BB7319F00AE987E /* CouponCell.swift */; settings = {ASSET_TAGS = (); }; };
-		509663F51BB73E4000AE987E /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509663F41BB73E4000AE987E /* SearchVC.swift */; settings = {ASSET_TAGS = (); }; };
-		A650A60F1BB6DD1A005288FA /* P2PayClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A60E1BB6DD1A005288FA /* P2PayClient.swift */; settings = {ASSET_TAGS = (); }; };
-		A650A6121BB6DDF6005288FA /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A6111BB6DDF6005288FA /* PaymentResponse.swift */; settings = {ASSET_TAGS = (); }; };
-		A650A61A1BB722A4005288FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A6191BB722A4005288FA /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		A697C5871BB73A8600918656 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697C5861BB73A8600918656 /* Serializable.swift */; settings = {ASSET_TAGS = (); }; };
-		A6BD0F221BB6D5BB00B78627 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F211BB6D5BB00B78627 /* User.swift */; settings = {ASSET_TAGS = (); }; };
-		A6BD0F241BB6D5CD00B78627 /* POS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F231BB6D5CD00B78627 /* POS.swift */; settings = {ASSET_TAGS = (); }; };
-		A6BD0F261BB6D5F400B78627 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F251BB6D5F400B78627 /* Coupon.swift */; settings = {ASSET_TAGS = (); }; };
-		A6BD0F281BB6D61A00B78627 /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F271BB6D61A00B78627 /* PaymentRequest.swift */; settings = {ASSET_TAGS = (); }; };
+		509663EC1BB7165300AE987E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663EB1BB7165300AE987E /* FBSDKCoreKit.framework */; };
+		509663EE1BB7181800AE987E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663ED1BB7181800AE987E /* FBSDKLoginKit.framework */; };
+		509663F11BB7319F00AE987E /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509663F01BB7319F00AE987E /* CouponCell.swift */; };
+		509663F51BB73E4000AE987E /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509663F41BB73E4000AE987E /* SearchVC.swift */; };
+		A650A60F1BB6DD1A005288FA /* P2PayClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A60E1BB6DD1A005288FA /* P2PayClient.swift */; };
+		A650A6121BB6DDF6005288FA /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A6111BB6DDF6005288FA /* PaymentResponse.swift */; };
+		A650A61A1BB722A4005288FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A6191BB722A4005288FA /* LoginViewController.swift */; };
+		A697C5871BB73A8600918656 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697C5861BB73A8600918656 /* Serializable.swift */; };
+		A6BD0F221BB6D5BB00B78627 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F211BB6D5BB00B78627 /* User.swift */; };
+		A6BD0F241BB6D5CD00B78627 /* POS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F231BB6D5CD00B78627 /* POS.swift */; };
+		A6BD0F261BB6D5F400B78627 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F251BB6D5F400B78627 /* Coupon.swift */; };
+		A6BD0F281BB6D61A00B78627 /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD0F271BB6D61A00B78627 /* PaymentRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		502B4A2E1BB764B500916B9B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		502B4A301BB764D400916B9B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		502B4A321BB764DE00916B9B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		502B4A341BB7662000916B9B /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
+		502B4A351BB7662000916B9B /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
 		5096639A1BB6D35200AE987E /* P2Pay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P2Pay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5096639D1BB6D35200AE987E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5096639F1BB6D35200AE987E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +104,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502B4A331BB764DE00916B9B /* SystemConfiguration.framework in Frameworks */,
+				502B4A311BB764D400916B9B /* StoreKit.framework in Frameworks */,
+				502B4A2F1BB764B500916B9B /* AddressBook.framework in Frameworks */,
+				502B4A371BB7662000916B9B /* GoogleSignIn.framework in Frameworks */,
 				509663E81BB6DB4500AE987E /* libicucore.tbd in Frameworks */,
 				509663E61BB6DB3900AE987E /* Foundation.framework in Frameworks */,
 				509663EE1BB7181800AE987E /* FBSDKLoginKit.framework in Frameworks */,
@@ -127,7 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				509663E71BB6DB4500AE987E /* libicucore.tbd */,
+				502B4A321BB764DE00916B9B /* SystemConfiguration.framework */,
+				502B4A301BB764D400916B9B /* StoreKit.framework */,
 				509663E51BB6DB3900AE987E /* Foundation.framework */,
+				502B4A2E1BB764B500916B9B /* AddressBook.framework */,
 				509663E31BB6DB3100AE987E /* Security.framework */,
 				509663E11BB6DB2B00AE987E /* CFNetwork.framework */,
 				509663DF1BB6DB1D00AE987E /* CoreLocation.framework */,
@@ -135,6 +152,8 @@
 				509663DA1BB6D9E600AE987E /* P2PKit.framework */,
 				509663EB1BB7165300AE987E /* FBSDKCoreKit.framework */,
 				509663ED1BB7181800AE987E /* FBSDKLoginKit.framework */,
+				502B4A341BB7662000916B9B /* GoogleSignIn.bundle */,
+				502B4A351BB7662000916B9B /* GoogleSignIn.framework */,
 				A650A6101BB6DD21005288FA /* Client */,
 				5096639C1BB6D35200AE987E /* P2Pay */,
 				509663B11BB6D35200AE987E /* P2PayTests */,
@@ -324,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502B4A361BB7662000916B9B /* GoogleSignIn.bundle in Resources */,
 				509663A81BB6D35200AE987E /* LaunchScreen.storyboard in Resources */,
 				509663A51BB6D35200AE987E /* Assets.xcassets in Resources */,
 				509663A31BB6D35200AE987E /* Main.storyboard in Resources */,
