@@ -18,10 +18,10 @@ class User: NSObject, Serializable {
         self.peerID = peerID
     }
     
-    func data() -> NSDictionary {
-        let dict = NSMutableDictionary()
-        dict.setValue(self.name, forKey: "name")
-        dict.setValue(self.facebookID, forKey: "facebook_id")
+    func data() -> Dictionary<String,AnyObject> {
+        var dict = Dictionary<String,AnyObject>()
+        dict["name"] = self.name
+        dict["facebook_id"] = self.facebookID
         return dict
     }
 

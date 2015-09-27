@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qd4-qc-TTv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VYC-Cl-KvO">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="96" width="600" height="416"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="88" id="iR8-jx-5gE" customClass="CouponCell" customModule="P2Pay" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="88" id="iR8-jx-5gE" customClass="CouponCell" customModule="P2Pay" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iR8-jx-5gE" id="jjc-Lv-kaq">
@@ -65,7 +65,6 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="Cyp-VO-jLi" secondAttribute="bottom" constant="10.5" id="zUa-ob-ZYf"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.80427520720000001" green="0.34973787010000001" blue="0.21327923439999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="couponTypeLabel" destination="kwk-oX-gh7" id="2cj-LI-sfS"/>
                                             <outlet property="descriptionLabel" destination="Cyp-VO-jLi" id="Zua-Lb-feP"/>
@@ -73,19 +72,33 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ydB-9u-lLo"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bsr-tV-Vdm"/>
+                                </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jFQ-Z7-cg7">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="96"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting for payment request…" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Mj-kC-bvx">
+                                <rect key="frame" x="20" y="520" width="560" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2Mj-kC-bvx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4Bo-I7-FuT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Mj-kC-bvx" secondAttribute="bottom" constant="8" id="7H8-Bx-EOO"/>
+                            <constraint firstItem="2Mj-kC-bvx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GCF-D1-wyb"/>
                             <constraint firstItem="jFQ-Z7-cg7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="H7g-Zm-QP7"/>
                             <constraint firstItem="TRU-Mf-5o5" firstAttribute="top" secondItem="jFQ-Z7-cg7" secondAttribute="bottom" id="Qgg-fq-vTR"/>
                             <constraint firstItem="jFQ-Z7-cg7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="STE-tr-smy"/>
                             <constraint firstItem="TRU-Mf-5o5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="76" id="g4C-MV-sk9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TRU-Mf-5o5" secondAttribute="bottom" constant="88" id="hzo-8G-qZK"/>
                             <constraint firstItem="TRU-Mf-5o5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pnZ-5W-aIt"/>
+                            <constraint firstItem="2Mj-kC-bvx" firstAttribute="top" secondItem="TRU-Mf-5o5" secondAttribute="bottom" constant="8" id="q7y-pj-jTc"/>
                             <constraint firstAttribute="trailing" secondItem="TRU-Mf-5o5" secondAttribute="trailing" id="vF7-Me-dFr"/>
                             <constraint firstAttribute="trailing" secondItem="jFQ-Z7-cg7" secondAttribute="trailing" id="vlp-W8-0Vn"/>
                         </constraints>

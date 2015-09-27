@@ -43,11 +43,10 @@ class SearchVC: UIViewController, PPKControllerDelegate,MessagingDelegate {
     }
     
     func p2pPeerDiscovered(peer: PPKPeer!) {
-        let discoveryInfoString = NSString(data: peer.discoveryInfo, encoding:NSUTF8StringEncoding)
-        guard let discoveryString = discoveryInfoString else {print("No DiscoveryString...");return}
-        print("Is here with discovery info: \(peer.peerID) \(discoveryString)")
-        if (discoveryInfoString == "POS") {
-            p2payClient.pos.peerID = peer.peerID
+        if let discoveryInfo = peer.discoveryInfo {
+            let discoveryInfoString = NSString(data: discoveryInfo, encoding:NSUTF8StringEncoding)
+            guard let discoveryString = discoveryInfoString else {print("No DiscoveryString...");return}
+            print("Is here with discovery info: \(peer.peerID) \(discoveryString)")
         }
     }
     
@@ -64,6 +63,7 @@ class SearchVC: UIViewController, PPKControllerDelegate,MessagingDelegate {
     func messageReceived(messageBody: NSData!, header messageHeader: String!, from peerID: String!) {
         do {
             let dic = try NSJSONSerialization.JSONObjectWithData(messageBody, options: .AllowFragments) as! NSDictionary
+            p2payClient.pos.peerID = peerID
             self.p2payClient.receiveData(dic)
         } catch let error as NSError {
             print(error)
@@ -78,6 +78,7 @@ class SearchVC: UIViewController, PPKControllerDelegate,MessagingDelegate {
     func willSendData(data: NSDictionary) {
         do {
             let rawData = try NSJSONSerialization.dataWithJSONObject(data, options: .PrettyPrinted)
+            print(rawData)
             PPKController.sendMessage(rawData, withHeader: "", to: p2payClient.pos.peerID)
         } catch let error as NSError {
             print(error)
