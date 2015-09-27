@@ -10,5 +10,5 @@ import UIKit
 
 protocol Serializable{
     var type: String {get}
-    func data() -> NSDictionary
+    func data() -> Dictionary<String,AnyObject>
 }

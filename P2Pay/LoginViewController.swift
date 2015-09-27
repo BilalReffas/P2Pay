@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class LoginViewController: UIViewController, FBSDKLoginButtonDelegate,GIDSignInUIDelegate{
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +22,14 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate,GIDSignInU
         loginButton.delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().clientID = "1031181075806-al8vdo83ftipiqnajs8mqm2ogun1uk9i.apps.googleusercontent.com"
-        //GIDSignIn.sharedInstance().signIn()
         
         let button = GIDSignInButton()
         button.center = CGPointMake(self.view.center.x, self.view.center.y + 150)
         self.view.addSubview(button)
+        
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
+            getUserID()
+        }
     }
     
 
@@ -56,33 +59,32 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate,GIDSignInU
             {
                 print("Error: \(error)")
             } else {
-                print("fetched user: \(result)")
-                let userName : NSString = result.valueForKey("name") as! NSString
-                print("User Name is: \(userName)")
-                let userEmail : NSString = result.valueForKey("email") as! NSString
-                print("User Email is: \(userEmail)")
+                P2PayClient.sharedInstance.me?.facebookID = result.valueForKey("id") as? String
+                P2PayClient.sharedInstance.me?.facebookID = result.valueForKey("name") as? String
+                self.delay(0.5) {
+                    self.performSegueWithIdentifier("openSearch", sender: self)
+
+                }
             }
         })
     }
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
-        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
-            if ((error) != nil) {
-                // Process error
-                print("Error: \(error)")
-            } else {
-                _ = result.valueForKey("id") as! String
-                self.performSegueWithIdentifier("openSearch", sender: self)
-            }
-        })
+        getUserID()
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("logout")
     }
     
-
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

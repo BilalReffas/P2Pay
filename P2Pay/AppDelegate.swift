@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,PPKControllerDelegate,GIDSignInDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate,PPKControllerDelegate{
 
     var window: UIWindow?
 
@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PPKControllerDelegate,GIDS
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     PPKController.enableWithConfiguration("eyJzaWduYXR1cmUiOiJRdEVtb09vR3orci9ockI1WUFXTWxvLzh4MC9lY2xEd0M0bUhNcnRwWnJDRk55bStDcDEzeGpEYTNXM096S0taTHJxN0RMa0VDWUtpRTEwYU0ycytRR1RRVkYvWVhWZlk2Ni9xajJKZ2lyWjcxbVlnQ0ptVkV3bFNlSWFVUWlqWHFjZXN5VGYrYkEvQzNVWWp2UlRzZkZTRjhCRFJuNFBuY1IyaVFVUkNyTmc9IiwiYXBwSWQiOjEyNDMsInZhbGlkVW50aWwiOjE2NzkwLCJhcHBVVVVJRCI6IkFGRERCMkRFLTc4OTYtNDMxNC1BQjNDLTk4REIyRkU1MTdGRCJ9", observer: self)
     
-        GIDSignIn.sharedInstance().delegate = self
 
         
         P2PayClient.sharedInstance.me = User(peerID: PPKController.myPeerID())
@@ -27,58 +26,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PPKControllerDelegate,GIDS
     }
     
     
-    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!,
-        withError error: NSError!) {
-            // Perform any operations when the user disconnects from app here.
-            // [START_EXCLUDE]
-            NSNotificationCenter.defaultCenter().postNotificationName(
-                "ToggleAuthUINotification",
-                object: nil,
-                userInfo: ["statusText": "User has disconnected."])
-            // [END_EXCLUDE]
-    }
-    
-    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
-        withError error: NSError!) {
-            if (error == nil) {
-                // Perform any operations on signed in user here.
-                let userId = user.userID                  // For client-side use only!
-                let idToken = user.authentication.idToken // Safe to send to the server
-                let name = user.profile.name
-                let email = user.profile.email
-                // [START_EXCLUDE]
-                NSNotificationCenter.defaultCenter().postNotificationName(
-                    "ToggleAuthUINotification",
-                    object: nil,
-                    userInfo: ["statusText": "Signed in user:\n\(name)"])
-                // [END_EXCLUDE]
-            } else {
-                print("\(error.localizedDescription)")
-                // [START_EXCLUDE silent]
-                NSNotificationCenter.defaultCenter().postNotificationName(
-                    "ToggleAuthUINotification", object: nil, userInfo: nil)
-                // [END_EXCLUDE]
-            }
-    }
-    
     func application(application: UIApplication,
         openURL url: NSURL,
         sourceApplication: String?,
         annotation: AnyObject) -> Bool {
-            
-        if url.scheme == "fb522906931196902"{
-            return FBSDKApplicationDelegate.sharedInstance().application(
+                        return FBSDKApplicationDelegate.sharedInstance().application(
                 application,
                 openURL: url,
                 sourceApplication: sourceApplication,
                 annotation: annotation)
-            }else{
-            
-            return GIDSignIn.sharedInstance().handleURL(url,
-                sourceApplication: sourceApplication,
-                annotation: annotation)
         }
-    }
     
     func PPKControllerFailedWithError(error: NSError!) {
         print("\(error.localizedDescription)")
