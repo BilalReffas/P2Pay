@@ -30,7 +30,21 @@ class PaymentVC: UIViewController {
                 LAPolicy.DeviceOwnerAuthenticationWithBiometrics,
                 localizedReason: "Authentication is required for payment",
                 reply: {(success, error) in
-                    // Code to handle reply here
+                    
+                    if success{
+                      print("Payment was successful!")
+                      let alert = UIAlertController(title: "Successfull", message: "Payment was sended to Rewe Group", preferredStyle: UIAlertControllerStyle.Alert)
+                        
+                      let actionOne = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (alert) -> Void in
+                        
+                      })
+                        alert.addAction(actionOne)
+                        
+                        dispatch_async(dispatch_get_main_queue()){
+                          self.presentViewController(alert, animated: true, completion: nil)
+                        }
+                    }
+                    
             })
         } else {
            print("TouchID not available not iDevice..")
@@ -49,9 +63,11 @@ class PaymentVC: UIViewController {
     }
 
     @IBAction func cancelPressed(sender: AnyObject) {
+        
     }
 
     @IBAction func checkmarkPressed(sender: AnyObject) {
+        
     }
 
 }
