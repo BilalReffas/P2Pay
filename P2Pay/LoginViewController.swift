@@ -32,13 +32,12 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
             getUserID()
         }
         
-        if GIDSignIn.sharedInstance().currentUser.profile.email
+    
         
     }
     
     
-    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
-        withError error: NSError!) {
+    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,withError error: NSError!) {
             if (error == nil) {
                 let userId = user.userID
                 let idToken = user.authentication.idToken

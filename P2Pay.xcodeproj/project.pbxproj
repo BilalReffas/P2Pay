@@ -30,6 +30,7 @@
 		509663EE1BB7181800AE987E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509663ED1BB7181800AE987E /* FBSDKLoginKit.framework */; };
 		509663F11BB7319F00AE987E /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509663F01BB7319F00AE987E /* CouponCell.swift */; };
 		509663F51BB73E4000AE987E /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509663F41BB73E4000AE987E /* SearchVC.swift */; };
+		50CF8BA71BB7C19500201583 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CF8BA61BB7C19500201583 /* PaymentVC.swift */; settings = {ASSET_TAGS = (); }; };
 		A650A60F1BB6DD1A005288FA /* P2PayClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A60E1BB6DD1A005288FA /* P2PayClient.swift */; };
 		A650A6121BB6DDF6005288FA /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A6111BB6DDF6005288FA /* PaymentResponse.swift */; };
 		A650A61A1BB722A4005288FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650A6191BB722A4005288FA /* LoginViewController.swift */; };
@@ -89,6 +90,7 @@
 		509663F01BB7319F00AE987E /* CouponCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
 		509663F21BB73B1700AE987E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		509663F41BB73E4000AE987E /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchVC.swift; path = Assets.xcassets/SearchVC.swift; sourceTree = "<group>"; };
+		50CF8BA61BB7C19500201583 /* PaymentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
 		A650A60E1BB6DD1A005288FA /* P2PayClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P2PayClient.swift; sourceTree = "<group>"; };
 		A650A6111BB6DDF6005288FA /* PaymentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
 		A650A6191BB722A4005288FA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				A650A6191BB722A4005288FA /* LoginViewController.swift */,
 				509663F21BB73B1700AE987E /* ViewController.swift */,
 				509663F01BB7319F00AE987E /* CouponCell.swift */,
+				50CF8BA61BB7C19500201583 /* PaymentVC.swift */,
 				509663F41BB73E4000AE987E /* SearchVC.swift */,
 				509663A11BB6D35200AE987E /* Main.storyboard */,
 				509663A41BB6D35200AE987E /* Assets.xcassets */,
@@ -374,6 +377,7 @@
 				509663F51BB73E4000AE987E /* SearchVC.swift in Sources */,
 				A697C5871BB73A8600918656 /* Serializable.swift in Sources */,
 				A6BD0F281BB6D61A00B78627 /* PaymentRequest.swift in Sources */,
+				50CF8BA71BB7C19500201583 /* PaymentVC.swift in Sources */,
 				509663F11BB7319F00AE987E /* CouponCell.swift in Sources */,
 				A6BD0F261BB6D5F400B78627 /* Coupon.swift in Sources */,
 				509663A01BB6D35200AE987E /* ViewController.swift in Sources */,
